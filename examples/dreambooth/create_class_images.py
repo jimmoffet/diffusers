@@ -814,7 +814,7 @@ def main(args):
 
     # save_weights(global_step)
 
-    accelerator.end_training()
+    # accelerator.end_training()
 
 
 if __name__ == "__main__":
