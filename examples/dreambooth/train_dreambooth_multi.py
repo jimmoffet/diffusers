@@ -880,5 +880,6 @@ def run_training(args_imported):
 
 
 if __name__ == "__main__":
-    pass
+    args = parse_args()
+    run_training(args)
     # main()
