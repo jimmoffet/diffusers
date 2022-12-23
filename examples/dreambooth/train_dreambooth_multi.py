@@ -247,7 +247,19 @@ def parse_args():
         help="Current session directory",
     )
 
-    parser.add_argument("--local_rank", type=int, default=-1, help="For distributed training: local_rank")
+    parser.add_argument(
+        "--local_rank",
+        type=int,
+        default=-1,
+        help="For distributed training: local_rank"
+    )
+
+    parser.add_argument(
+        "--concepts_list",
+        type=str,
+        default=None,
+        help="Path to json containing multiple concepts, will overwrite parameters like instance_prompt, class_prompt, etc.",
+    )
 
     args = parser.parse_args()
     env_local_rank = int(os.environ.get("LOCAL_RANK", -1))
